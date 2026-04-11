@@ -150,12 +150,12 @@ img{max-width:100%;height:auto;display:block}
 .text-center .section-desc{margin-left:auto;margin-right:auto}
 
 /* ===== TOP BAR ===== */
-.top-bar{background:linear-gradient(135deg,#e00909,#b00707);text-align:center;padding:10px 24px;font-size:.88rem;font-weight:600;color:#fff;letter-spacing:.03em}
-.top-bar a{color:#fff;text-decoration:underline;text-underline-offset:2px}
-.top-bar a:hover{color:#ffd4d4}
+.top-bar{background:linear-gradient(135deg,rgba(224,9,9,.15),rgba(176,7,7,.1));text-align:center;padding:12px 24px;font-size:.88rem;font-weight:600;color:#fff;letter-spacing:.03em;border-bottom:1px solid rgba(224,9,9,.2)}
+.top-bar a{color:#ff6b6b;text-decoration:none;font-weight:700;transition:color .3s}
+.top-bar a:hover{color:#ff9999}
 
 /* ===== HEADER / NAV ===== */
-header{background:rgba(10,10,10,.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(255,255,255,.06);transition:box-shadow .3s}
+header{background:linear-gradient(180deg,rgba(20,20,20,.98) 0%,rgba(10,10,10,.98) 100%);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(255,255,255,.06);transition:box-shadow .3s}
 header.scrolled{box-shadow:0 4px 30px rgba(224,9,9,.15)}
 .nav-wrap{display:flex;justify-content:space-between;align-items:center;padding:10px 24px;max-width:1240px;margin:0 auto}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
@@ -461,8 +461,7 @@ footer{background:#060606;border-top:1px solid rgba(255,255,255,.06);padding:60p
 <!-- ===== VIDEO HERO ===== -->
 <section class="video-hero">
   <video autoplay muted loop playsinline preload="auto" id="heroVideo">
-    <source src="hype-video.mov" type="video/quicktime">
-    <source src="hype-video.mp4" type="video/mp4">
+    <source src="hero-video.mp4" type="video/mp4">
   </video>
   <div class="video-hero-overlay"></div>
   <div class="video-hero-content">
@@ -642,22 +641,101 @@ footer{background:#060606;border-top:1px solid rgba(255,255,255,.06);padding:60p
       </article>
     </div>
 
+    <!-- Ceramic Coating Packages -->
+    <div class="text-center" style="margin-top:72px">
+      <span class="section-label reveal">Long-Term Protection</span>
+      <h2 class="section-title reveal">Ceramic Coating Packages</h2>
+      <p class="section-desc reveal">Professional-grade SiO₂ protection. Hydrophobic, UV-resistant, and glass-like — built to last years, not months.</p>
+    </div>
+
+    <div class="services-grid">
+      <!-- Ceramic Stage 1 -->
+      <article class="service-card reveal">
+        <div class="service-card-img">
+          <img src="ceramic-stage1.jpg" alt="Ceramic Coating Stage 1 by Pistol Pete's Mobile Detailing Palm Coast FL" loading="lazy">
+          <div class="overlay"></div>
+          <span class="stage-badge">Stage 1</span>
+        </div>
+        <div class="service-card-body">
+          <h3>Ceramic Stage 1</h3>
+          <div class="price-row">
+            <span class="price-tag">Call for Quote</span>
+          </div>
+          <p>Entry-level ceramic protection for daily drivers. A single-layer SiO₂ coating that bonds to your paint for hydrophobic, UV-resistant protection.</p>
+          <div class="service-detail-grid">
+            <div class="detail-item"><span class="check">✓</span> Single-Layer SiO₂ Coating</div>
+            <div class="detail-item"><span class="check">✓</span> Hydrophobic Protection</div>
+            <div class="detail-item"><span class="check">✓</span> UV Ray Resistance</div>
+            <div class="detail-item"><span class="check">✓</span> Paint Decontamination</div>
+            <div class="detail-item"><span class="check">✓</span> Surface Prep & Polish</div>
+            <div class="detail-item"><span class="check">✓</span> Enhanced Gloss Finish</div>
+          </div>
+          <a href="#contact" class="service-cta">Book Ceramic Stage 1 <span>→</span></a>
+        </div>
+      </article>
+
+      <!-- Ceramic Stage 2 -->
+      <article class="service-card reveal reveal-delay-1">
+        <div class="service-card-img">
+          <img src="ceramic-stage2.jpg" alt="Ceramic Coating Stage 2 by Pistol Pete's Mobile Detailing Palm Coast FL" loading="lazy">
+          <div class="overlay"></div>
+          <span class="stage-badge">Stage 2</span>
+        </div>
+        <div class="service-card-body">
+          <h3>Ceramic Stage 2</h3>
+          <div class="price-row">
+            <span class="price-tag">Call for Quote</span>
+          </div>
+          <p>Enhanced multi-layer ceramic coating with deeper gloss and longer-lasting protection. Ideal for vehicles that need serious long-term defense.</p>
+          <div class="service-detail-grid">
+            <div class="detail-item"><span class="check">✓</span> Multi-Layer SiO₂ Coating</div>
+            <div class="detail-item"><span class="check">✓</span> Hydrophobic Protection</div>
+            <div class="detail-item"><span class="check">✓</span> UV & Chemical Resistance</div>
+            <div class="detail-item"><span class="check">✓</span> Clay Bar Decontamination</div>
+            <div class="detail-item"><span class="check">✓</span> One-Step Machine Polish</div>
+            <div class="detail-item"><span class="check">✓</span> Deep Mirror Gloss</div>
+          </div>
+          <a href="#contact" class="service-cta">Book Ceramic Stage 2 <span>→</span></a>
+        </div>
+      </article>
+
+      <!-- Ceramic Stage 3 -->
+      <article class="service-card reveal reveal-delay-2">
+        <div class="service-card-img">
+          <img src="ceramic-stage3.jpg" alt="Ceramic Coating Stage 3 Premium by Pistol Pete's Mobile Detailing Palm Coast FL" loading="lazy">
+          <div class="overlay"></div>
+          <span class="stage-badge">Stage 3 &bull; Premium</span>
+        </div>
+        <div class="service-card-body">
+          <h3>Ceramic Stage 3</h3>
+          <div class="price-row">
+            <span class="price-tag">Call for Quote</span>
+          </div>
+          <p>The ultimate ceramic treatment. Full paint correction followed by a premium multi-layer ceramic coating — maximum gloss, maximum protection, years of durability.</p>
+          <div class="service-detail-grid">
+            <div class="detail-item"><span class="check">✓</span> Full Paint Correction</div>
+            <div class="detail-item"><span class="check">✓</span> Premium Ceramic Layers</div>
+            <div class="detail-item"><span class="check">✓</span> Hydrophobic & Self-Cleaning</div>
+            <div class="detail-item"><span class="check">✓</span> Clay Bar & Iron Decon</div>
+            <div class="detail-item"><span class="check">✓</span> Swirl & Scratch Removal</div>
+            <div class="detail-item"><span class="check">✓</span> Glass-Like Mirror Finish</div>
+          </div>
+          <a href="#contact" class="service-cta">Book Ceramic Stage 3 <span>→</span></a>
+        </div>
+      </article>
+    </div>
+
     <!-- Add-on Services -->
     <div class="addon-grid">
       <div class="addon-card reveal">
-        <div class="addon-icon">🛡️</div>
-        <h3>Ceramic Coatings</h3>
-        <p>Professional-grade SiO₂ protection. Long-lasting, hydrophobic glass-like layer that shields against UV, bird droppings, water spots, and contaminants for years.</p>
-      </div>
-      <div class="addon-card reveal reveal-delay-1">
         <div class="addon-icon">✨</div>
         <h3>Paint Correction</h3>
-        <p>Wet sand and polish with a one-step machine polish to restore clarity, depth, and mirror-finish gloss. Removes swirls, scratches, and oxidation before ceramic coating to seal the headlight.</p>
+        <p>Wet sand and polish with a one-step machine polish to restore clarity, depth, and mirror-finish gloss. Removes swirls, scratches, and oxidation.</p>
       </div>
-      <div class="addon-card reveal reveal-delay-2">
+      <div class="addon-card reveal reveal-delay-1">
         <div class="addon-icon">💡</div>
         <h3>Headlight Restoration</h3>
-        <p>Wet sand and polish with a one step machine polish. To restore clarity, depth, and mirror-finish gloss. Removes swirls, scratches, and oxidation before ceramic coating to seal the headlight.</p>
+        <p>Wet sand and polish to restore clarity, depth, and mirror-finish gloss. Removes yellowing, scratches, and oxidation then seals with ceramic coating.</p>
       </div>
     </div>
   </div>
@@ -707,68 +785,85 @@ footer{background:#060606;border-top:1px solid rgba(255,255,255,.06);padding:60p
   </div>
   <div class="gallery-track-wrapper">
     <div class="gallery-track" id="galleryTrack">
-      <!-- G-WAGON (luxury first) -->
       <div class="gallery-item">
-        <img src="gallery-gwagon-1.jpg" alt="Mercedes G-Wagon front detail by Pistol Pete's Detailing Palm Coast" loading="lazy">
-        <div class="gallery-overlay"><span>Mercedes G-Wagon</span></div>
+        <img src="gallery-1.webp" alt="Auto detail by Pistol Pete's Mobile Detailing Palm Coast FL" loading="lazy">
+        <div class="gallery-overlay"><span>Detail Work</span></div>
       </div>
       <div class="gallery-item">
-        <img src="gallery-gwagon-2.jpg" alt="Mercedes G-Wagon side detail showing paint gloss" loading="lazy">
-        <div class="gallery-overlay"><span>G-Wagon — Full Detail</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="gallery-gwagon-4.jpg" alt="Mercedes G-Wagon V8 badge close-up detail" loading="lazy">
-        <div class="gallery-overlay"><span>V8 Badge Detail</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="gallery-gwagon-5.jpg" alt="Mercedes G-Wagon black rim detail Pirelli Scorpion tires" loading="lazy">
-        <div class="gallery-overlay"><span>Rim & Tire Detail</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="gallery-gwagon-6.jpg" alt="Mercedes G-Wagon interior detail white leather dashboard" loading="lazy">
-        <div class="gallery-overlay"><span>G-Wagon Interior</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="gallery-gwagon-7.jpg" alt="Mercedes G-Wagon detail Palm Coast FL" loading="lazy">
-        <div class="gallery-overlay"><span>G-Wagon Detail</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="gallery-gwagon-8.jpg" alt="Mercedes G-Wagon finished detail by Pistol Pete's" loading="lazy">
-        <div class="gallery-overlay"><span>G-Wagon Finished</span></div>
-      </div>
-      <!-- PORSCHE -->
-      <div class="gallery-item">
-        <img src="gallery-porsche-1.jpg" alt="Porsche detail by Pistol Pete's Mobile Detailing" loading="lazy">
-        <div class="gallery-overlay"><span>Porsche Detail</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="gallery-porsche-2.jpg" alt="Porsche exterior detail Palm Coast FL" loading="lazy">
-        <div class="gallery-overlay"><span>Porsche Exterior</span></div>
-      </div>
-      <!-- EXISTING GALLERY FROM PISTOLPETESDETAILING.COM -->
-      <div class="gallery-item">
-        <img src="https://img1.wsimg.com/isteam/ip/105aeeae-70d7-4150-b6ac-3320167fad9d/20.jpg" alt="Professional auto detail by Pistol Pete's" loading="lazy">
-        <div class="gallery-overlay"><span>Exterior Detail</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="https://img1.wsimg.com/isteam/ip/105aeeae-70d7-4150-b6ac-3320167fad9d/21.jpg" alt="Auto detailing results Palm Coast FL" loading="lazy">
-        <div class="gallery-overlay"><span>Paint Correction</span></div>
-      </div>
-      <div class="gallery-item">
-        <img src="https://img1.wsimg.com/isteam/ip/105aeeae-70d7-4150-b6ac-3320167fad9d/22.jpg" alt="Mobile car detailing Ormond Beach FL" loading="lazy">
+        <img src="gallery-2.webp" alt="Professional car detailing Palm Coast FL" loading="lazy">
         <div class="gallery-overlay"><span>Full Detail</span></div>
       </div>
       <div class="gallery-item">
-        <img src="https://img1.wsimg.com/isteam/ip/105aeeae-70d7-4150-b6ac-3320167fad9d/9.jpg" alt="Ceramic coating results by Pistol Pete's" loading="lazy">
+        <img src="gallery-3.webp" alt="Mobile detailing results by Pistol Pete's" loading="lazy">
+        <div class="gallery-overlay"><span>Exterior Detail</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="gallery-4.webp" alt="Paint correction and ceramic coating Palm Coast" loading="lazy">
+        <div class="gallery-overlay"><span>Paint Correction</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="gallery-5.webp" alt="Interior detailing by Pistol Pete's" loading="lazy">
+        <div class="gallery-overlay"><span>Interior Detail</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="gallery-6.webp" alt="Ceramic coating application Palm Coast FL" loading="lazy">
         <div class="gallery-overlay"><span>Ceramic Coating</span></div>
       </div>
       <div class="gallery-item">
-        <img src="https://img1.wsimg.com/isteam/ip/105aeeae-70d7-4150-b6ac-3320167fad9d/11.jpg" alt="Before and after auto detail" loading="lazy">
-        <div class="gallery-overlay"><span>Before & After</span></div>
+        <img src="gallery-7.webp" alt="Rim and tire detail by Pistol Pete's" loading="lazy">
+        <div class="gallery-overlay"><span>Rim & Tire Detail</span></div>
       </div>
       <div class="gallery-item">
-        <img src="https://img1.wsimg.com/isteam/ip/105aeeae-70d7-4150-b6ac-3320167fad9d/5.png" alt="Interior detail by Pistol Pete's" loading="lazy">
+        <img src="gallery-8.webp" alt="Vehicle detailing Ormond Beach FL" loading="lazy">
+        <div class="gallery-overlay"><span>Full Detail</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="gallery-9.webp" alt="Professional mobile detailing results" loading="lazy">
+        <div class="gallery-overlay"><span>Exterior Finish</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="gallery-10.webp" alt="Mobile car detailing Palm Coast FL" loading="lazy">
+        <div class="gallery-overlay"><span>Detail Work</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="gallery-11.webp" alt="Auto detailing by Pistol Pete's" loading="lazy">
+        <div class="gallery-overlay"><span>Paint Gloss</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="gallery-12.webp" alt="Interior cleaning and detailing" loading="lazy">
+        <div class="gallery-overlay"><span>Interior Clean</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="gallery-13.webp" alt="Ceramic coating results Palm Coast" loading="lazy">
+        <div class="gallery-overlay"><span>Ceramic Coating</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="gallery-14.webp" alt="Professional detailing Flagler County FL" loading="lazy">
+        <div class="gallery-overlay"><span>Stage 3 Detail</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="gallery-15.webp" alt="Mobile detailing Hammock FL" loading="lazy">
+        <div class="gallery-overlay"><span>Full Detail</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="gallery-16.webp" alt="Auto detail by Pistol Pete's Palm Coast" loading="lazy">
+        <div class="gallery-overlay"><span>Exterior Detail</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="gallery-17.webp" alt="Paint correction results Ormond Beach" loading="lazy">
+        <div class="gallery-overlay"><span>Paint Correction</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="gallery-18.webp" alt="Vehicle interior detail Palm Coast FL" loading="lazy">
         <div class="gallery-overlay"><span>Interior Detail</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="gallery-19.webp" alt="Full detail service by Pistol Pete's" loading="lazy">
+        <div class="gallery-overlay"><span>Full Detail</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="gallery-20.webp" alt="Premium mobile detailing Palm Coast FL" loading="lazy">
+        <div class="gallery-overlay"><span>Premium Detail</span></div>
       </div>
     </div>
     <div class="gallery-nav">
@@ -1061,6 +1156,8 @@ footer{background:#060606;border-top:1px solid rgba(255,255,255,.06);padding:60p
                 <option value="coupe">Coupe / Small Car</option>
                 <option value="sedan">Sedan / 2-Row SUV</option>
                 <option value="truck">3-Row SUV / Truck</option>
+                <option value="motorcycle">Motorcycle</option>
+                <option value="boat">Boat</option>
               </select>
             </div>
             <div class="form-group">
