@@ -14,10 +14,6 @@
 <meta name="geo.region" content="US-FL">
 <meta name="geo.placename" content="Palm Coast">
 
-<!-- Favicon -->
-<link rel="icon" type="image/png" href="pp-logo.png">
-<link rel="apple-touch-icon" href="pp-logo.png">
-
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://pistolpetesdetailing.com/">
@@ -32,16 +28,6 @@
 <meta name="twitter:title" content="Pistol Pete's Mobile Detailing | Palm Coast FL">
 <meta name="twitter:description" content="Professional mobile car detailing & ceramic coatings. 3-stage packages from $150. Text (386) 393-1772.">
 <meta name="twitter:image" content="pp-logo.png">
-
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-50QGRC1XNC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-50QGRC1XNC');
-</script>
 
 <!-- Preload fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -137,24 +123,6 @@
 }
 </script>
 
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '233844505762768');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=233844505762768&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-
 <style>
 /* ===== RESET & BASE ===== */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -182,12 +150,12 @@ img{max-width:100%;height:auto;display:block}
 .text-center .section-desc{margin-left:auto;margin-right:auto}
 
 /* ===== TOP BAR ===== */
-.top-bar{background:linear-gradient(135deg,rgba(224,9,9,.15),rgba(176,7,7,.1));text-align:center;padding:12px 24px;font-size:.88rem;font-weight:600;color:#fff;letter-spacing:.03em;border-bottom:1px solid rgba(224,9,9,.2)}
-.top-bar a{color:#ff6b6b;text-decoration:none;font-weight:700;transition:color .3s}
-.top-bar a:hover{color:#ff9999}
+.top-bar{background:linear-gradient(135deg,#e00909,#b00707);text-align:center;padding:10px 24px;font-size:.88rem;font-weight:600;color:#fff;letter-spacing:.03em}
+.top-bar a{color:#fff;text-decoration:underline;text-underline-offset:2px}
+.top-bar a:hover{color:#ffd4d4}
 
 /* ===== HEADER / NAV ===== */
-header{background:#000000;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(255,255,255,.06);transition:box-shadow .3s}
+header{background:rgba(10,10,10,.97);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);position:sticky;top:0;z-index:1000;border-bottom:1px solid rgba(255,255,255,.06);transition:box-shadow .3s}
 header.scrolled{box-shadow:0 4px 30px rgba(224,9,9,.15)}
 .nav-wrap{display:flex;justify-content:space-between;align-items:center;padding:10px 24px;max-width:1240px;margin:0 auto}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
@@ -432,18 +400,6 @@ footer{background:#060606;border-top:1px solid rgba(255,255,255,.06);padding:60p
   .video-hero-content .hero-actions{flex-direction:column}
   .btn-primary,.btn-secondary{width:100%;justify-content:center}
 }
-
-/* Sound Toggle Button */
-.sound-toggle{
-  position:absolute;bottom:80px;right:30px;z-index:10;
-  width:50px;height:50px;border-radius:50%;border:2px solid rgba(255,255,255,0.4);
-  background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);
-  color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;
-  transition:all .3s ease;
-}
-.sound-toggle:hover{background:rgba(224,9,9,0.7);border-color:#e00909;transform:scale(1.1)}
-.sound-toggle svg{width:22px;height:22px}
-.sound-toggle.active{border-color:#e00909;background:rgba(224,9,9,0.5)}
 </style>
 </head>
 <body>
@@ -492,29 +448,18 @@ footer{background:#060606;border-top:1px solid rgba(255,255,255,.06);padding:60p
 
 <!-- ===== VIDEO HERO ===== -->
 <section class="video-hero">
-  <video autoplay muted loop playsinline preload="auto" id="heroVideo">
-    <source src="hero-video.mp4" type="video/mp4">
+  <video autoplay muted loop playsinline preload="auto">
+    <source src="hype-video.mov" type="video/quicktime">
+    <source src="hype-video.mp4" type="video/mp4">
   </video>
   <div class="video-hero-overlay"></div>
-  <button class="sound-toggle" id="soundToggle" aria-label="Toggle sound">
-    <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
-    <svg class="icon-unmuted" style="display:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
-  </button>
-  <div class="scroll-hint">
-    Scroll
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-  </div>
-</section>
-
-<!-- ===== HERO TEXT SECTION ===== -->
-<section style="background:#0a0a0a;padding:80px 24px;text-align:center">
-  <div style="max-width:800px;margin:0 auto">
-    <h1 style="color:#fff;margin-bottom:24px;font-family:'Oswald',system-ui,sans-serif;font-size:3rem;line-height:1.15;letter-spacing:0.02em;text-transform:uppercase">
+  <div class="video-hero-content">
+    <h1>
       Pistol Pete's
-      <span style="color:#e00909">Mobile Auto Detailing</span>
+      <span class="highlight">Mobile Auto Detailing</span>
     </h1>
-    <p style="color:#ccc;font-size:1.15rem;margin-bottom:40px;line-height:1.7">Professional mobile car detailing and ceramic coatings serving Palm Coast, Ormond Beach & the Hammock. We bring the full spa experience to your driveway.</p>
-    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+    <p>Professional mobile car detailing and ceramic coatings serving Palm Coast, Ormond Beach & the Hammock. We bring the full spa experience to your driveway.</p>
+    <div class="hero-actions">
       <a href="#contact" class="btn-primary">
         Schedule Your Detail
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -524,6 +469,10 @@ footer{background:#060606;border-top:1px solid rgba(255,255,255,.06);padding:60p
         (386) 393-1772
       </a>
     </div>
+  </div>
+  <div class="scroll-hint">
+    Scroll
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
   </div>
 </section>
 
@@ -582,7 +531,7 @@ footer{background:#060606;border-top:1px solid rgba(255,255,255,.06);padding:60p
       <!-- Stage 1 -->
       <article class="service-card reveal">
         <div class="service-card-img">
-          <img src="stage1.jpg" alt="Stage 1 Interior and Exterior Detail - Pistol Pete's Mobile Detailing Palm Coast FL" loading="lazy">
+          <img src="https://img1.wsimg.com/isteam/ip/105aeeae-70d7-4150-b6ac-3320167fad9d/1000087498.jpg" alt="Stage 1 Interior and Exterior Detail - Pistol Pete's Mobile Detailing Palm Coast FL" loading="lazy">
           <div class="overlay"></div>
           <span class="stage-badge">Stage 1</span>
         </div>
@@ -613,7 +562,7 @@ footer{background:#060606;border-top:1px solid rgba(255,255,255,.06);padding:60p
       <!-- Stage 2 -->
       <article class="service-card reveal reveal-delay-1">
         <div class="service-card-img">
-          <img src="stage2.jpg" alt="Stage 2 Full Detail - Pistol Pete's Mobile Detailing Palm Coast FL" loading="lazy">
+          <img src="https://img1.wsimg.com/isteam/ip/105aeeae-70d7-4150-b6ac-3320167fad9d/1000087499.jpg" alt="Stage 2 Full Detail - Pistol Pete's Mobile Detailing Palm Coast FL" loading="lazy">
           <div class="overlay"></div>
           <span class="stage-badge">Stage 2</span>
         </div>
@@ -646,7 +595,7 @@ footer{background:#060606;border-top:1px solid rgba(255,255,255,.06);padding:60p
       <!-- Stage 3 -->
       <article class="service-card reveal reveal-delay-2">
         <div class="service-card-img">
-          <img src="stage3.jpg" alt="Stage 3 Premium Detail - Pistol Pete's Mobile Detailing Palm Coast FL" loading="lazy">
+          <img src="https://img1.wsimg.com/isteam/ip/105aeeae-70d7-4150-b6ac-3320167fad9d/1000087500.jpg" alt="Stage 3 Premium Detail - Pistol Pete's Mobile Detailing Palm Coast FL" loading="lazy">
           <div class="overlay"></div>
           <span class="stage-badge">Stage 3 &bull; Premium</span>
         </div>
@@ -677,104 +626,22 @@ footer{background:#060606;border-top:1px solid rgba(255,255,255,.06);padding:60p
       </article>
     </div>
 
-    <!-- Ceramic Coating Packages -->
-    <div class="text-center" style="margin-top:72px">
-      <span class="section-label reveal">Long-Term Protection</span>
-      <h2 class="section-title reveal">Ceramic Coating Packages</h2>
-      <p class="section-desc reveal">Professional ceramic protection. Hydrophobic, UV-resistant, and glass-like — built to last years, not months.</p>
-    </div>
-
-    <div class="services-grid">
-      <!-- Ceramic Stage 1 -->
-      <article class="service-card reveal">
-        <div class="service-card-img">
-          <img src="ceramic-stage1.jpg" alt="Ceramic Coating Stage 1 by Pistol Pete's Mobile Detailing Palm Coast FL" loading="lazy">
-          <div class="overlay"></div>
-          <span class="stage-badge">Stage 1</span>
-        </div>
-        <div class="service-card-body">
-          <h3>Ceramic Stage 1</h3>
-          <div class="price-row">
-            <span class="price-tag">Call for Quote</span>
-          </div>
-          <p>Entry-level ceramic protection for daily drivers. A single-layer SiO₂ coating that bonds to your paint for hydrophobic, UV-resistant protection.</p>
-          <div class="service-detail-grid">
-            <div class="detail-item"><span class="check">✓</span> Premium 1 Year Coating</div>
-            <div class="detail-item"><span class="check">✓</span> Hydrophobic Protection</div>
-            <div class="detail-item"><span class="check">✓</span> UV Ray Resistance</div>
-            <div class="detail-item"><span class="check">✓</span> Paint Decontamination</div>
-            <div class="detail-item"><span class="check">✓</span> Full Paint prep</div>
-            <div class="detail-item"><span class="check">✓</span> Enhanced Gloss Finish</div>
-          </div>
-          <a href="#contact" class="service-cta">Book Ceramic Stage 1 <span>→</span></a>
-        </div>
-      </article>
-
-      <!-- Ceramic Stage 2 -->
-      <article class="service-card reveal reveal-delay-1">
-        <div class="service-card-img">
-          <img src="ceramic-stage2.jpg" alt="Ceramic Coating Stage 2 by Pistol Pete's Mobile Detailing Palm Coast FL" loading="lazy">
-          <div class="overlay"></div>
-          <span class="stage-badge">Stage 2</span>
-        </div>
-        <div class="service-card-body">
-          <h3>Ceramic Stage 2</h3>
-          <div class="price-row">
-            <span class="price-tag">Call for Quote</span>
-          </div>
-          <p>Enhanced single-layer ceramic coating with deeper gloss and longer-lasting protection. Ideal for vehicles that need serious long-term defense.</p>
-          <div class="service-detail-grid">
-            <div class="detail-item"><span class="check">✓</span> Premium 3 Year Coating</div>
-            <div class="detail-item"><span class="check">✓</span> Hydrophobic Protection</div>
-            <div class="detail-item"><span class="check">✓</span> UV & Element Resistance</div>
-            <div class="detail-item"><span class="check">✓</span> Clay Bar Decontamination</div>
-            <div class="detail-item"><span class="check">✓</span> One-Step Machine Polish</div>
-            <div class="detail-item"><span class="check">✓</span> Deep Mirror Gloss</div>
-          </div>
-          <a href="#contact" class="service-cta">Book Ceramic Stage 2 <span>→</span></a>
-        </div>
-      </article>
-
-      <!-- Ceramic Stage 3 -->
-      <article class="service-card reveal reveal-delay-2">
-        <div class="service-card-img">
-          <img src="ceramic-stage3.jpg" alt="Ceramic Coating Stage 3 Premium by Pistol Pete's Mobile Detailing Palm Coast FL" loading="lazy">
-          <div class="overlay"></div>
-          <span class="stage-badge">Stage 3 &bull; Premium</span>
-        </div>
-        <div class="service-card-body">
-          <h3>Ceramic Stage 3</h3>
-          <div class="price-row">
-            <span class="price-tag">Call for Quote</span>
-          </div>
-          <p>The ultimate ceramic treatment. Full paint correction followed by a premium multi-layer ceramic coating — maximum gloss, maximum protection, years of durability.</p>
-          <div class="service-detail-grid">
-            <div class="detail-item"><span class="check">✓</span> 1 Step Paint Correction</div>
-            <div class="detail-item"><span class="check">✓</span> Premium 5 Year Coating</div>
-            <div class="detail-item"><span class="check">✓</span> Hydrophobic & Self-Cleaning</div>
-            <div class="detail-item"><span class="check">✓</span> Clay Bar & Iron Decon</div>
-            <div class="detail-item"><span class="check">✓</span> Full Paint Prep</div>
-            <div class="detail-item"><span class="check">✓</span> Glass-Like Mirror Finish</div>
-          </div>
-          <a href="#contact" class="service-cta">Book Ceramic Stage 3 <span>→</span></a>
-        </div>
-      </article>
-    </div>
-
     <!-- Add-on Services -->
     <div class="addon-grid">
       <div class="addon-card reveal">
-        <div class="addon-icon">✨</div>
-        <h3>Paint Correction</h3>
-        <p>Wet sand and polish with a one-step machine polish to restore clarity, depth, and mirror-finish gloss. Removes swirls, scratches, and oxidation.</p>
+        <div class="addon-icon">🛡️</div>
+        <h3>Ceramic Coatings</h3>
+        <p>Professional-grade SiO₂ protection. Long-lasting, hydrophobic glass-like layer that shields against UV, bird droppings, water spots, and contaminants for years.</p>
       </div>
       <div class="addon-card reveal reveal-delay-1">
+        <div class="addon-icon">✨</div>
+        <h3>Paint Correction</h3>
+        <p>Wet sand and polish with a one-step machine polish to restore clarity, depth, and mirror-finish gloss. Removes swirls, scratches, and oxidation before ceramic coating to seal the headlight.</p>
+      </div>
+      <div class="addon-card reveal reveal-delay-2">
         <div class="addon-icon">💡</div>
         <h3>Headlight Restoration</h3>
-        <div class="price-row" style="margin-bottom: 12px;">
-          <span class="price-tag">$100</span>
-        </div>
-        <p>Wet sand and polish to restore clarity, depth, and mirror-finish gloss. Removes yellowing, scratches, and oxidation then seals with ceramic coating.</p>
+        <p>Wet-sand and polish cloudy, yellowed headlights back to crystal-clear — improving nighttime visibility and curb appeal.</p>
       </div>
     </div>
   </div>
@@ -824,65 +691,51 @@ footer{background:#060606;border-top:1px solid rgba(255,255,255,.06);padding:60p
   </div>
   <div class="gallery-track-wrapper">
     <div class="gallery-track" id="galleryTrack">
+      <!-- NEW PHOTOS FIRST (G-Wagon, luxury vehicles) -->
       <div class="gallery-item">
-        <img src="gallery/gallery-1.jpeg" alt="Auto detail by Pistol Pete's Mobile Detailing Palm Coast FL" loading="lazy">
+        <img src="https://img1.wsimg.com/isteam/ip/105aeeae-70d7-4150-b6ac-3320167fad9d/gwagon-front.jpg" alt="Mercedes G-Wagon front detail by Pistol Pete's Detailing Palm Coast" loading="lazy">
+        <div class="gallery-overlay"><span>Mercedes G-Wagon</span></div>
       </div>
       <div class="gallery-item">
-        <img src="gallery/gallery-2.jpeg" alt="Professional car detailing Palm Coast FL" loading="lazy">
+        <img src="https://img1.wsimg.com/isteam/ip/105aeeae-70d7-4150-b6ac-3320167fad9d/gwagon-side.jpg" alt="Mercedes G-Wagon side detail showing paint gloss" loading="lazy">
+        <div class="gallery-overlay"><span>G-Wagon — Paint Gloss</span></div>
       </div>
       <div class="gallery-item">
-        <img src="gallery/gallery-3.jpeg" alt="Mobile detailing results by Pistol Pete's" loading="lazy">
+        <img src="https://img1.wsimg.com/isteam/ip/105aeeae-70d7-4150-b6ac-3320167fad9d/gwagon-v8.jpg" alt="Mercedes G-Wagon V8 badge detail" loading="lazy">
+        <div class="gallery-overlay"><span>V8 Badge Detail</span></div>
       </div>
       <div class="gallery-item">
-        <img src="gallery/gallery-4.jpeg" alt="Paint correction and ceramic coating Palm Coast" loading="lazy">
+        <img src="https://img1.wsimg.com/isteam/ip/105aeeae-70d7-4150-b6ac-3320167fad9d/gwagon-wheel.jpg" alt="Mercedes G-Wagon black rim detail Pirelli tires" loading="lazy">
+        <div class="gallery-overlay"><span>Rim & Tire Detail</span></div>
       </div>
       <div class="gallery-item">
-        <img src="gallery/gallery-5.jpeg" alt="Interior detailing by Pistol Pete's" loading="lazy">
+        <img src="https://img1.wsimg.com/isteam/ip/105aeeae-70d7-4150-b6ac-3320167fad9d/gwagon-interior.jpg" alt="Mercedes G-Wagon interior detail white leather" loading="lazy">
+        <div class="gallery-overlay"><span>G-Wagon Interior</span></div>
+      </div>
+      <!-- EXISTING GALLERY FROM PISTOLPETESDETAILING.COM -->
+      <div class="gallery-item">
+        <img src="https://img1.wsimg.com/isteam/ip/105aeeae-70d7-4150-b6ac-3320167fad9d/20.jpg" alt="Professional auto detail by Pistol Pete's" loading="lazy">
+        <div class="gallery-overlay"><span>Exterior Detail</span></div>
       </div>
       <div class="gallery-item">
-        <img src="gallery/gallery-6.jpeg" alt="Ceramic coating application Palm Coast FL" loading="lazy">
+        <img src="https://img1.wsimg.com/isteam/ip/105aeeae-70d7-4150-b6ac-3320167fad9d/21.jpg" alt="Auto detailing results Palm Coast FL" loading="lazy">
+        <div class="gallery-overlay"><span>Paint Correction</span></div>
       </div>
       <div class="gallery-item">
-        <img src="gallery/gallery-7.jpeg" alt="Rim and tire detail by Pistol Pete's" loading="lazy">
+        <img src="https://img1.wsimg.com/isteam/ip/105aeeae-70d7-4150-b6ac-3320167fad9d/22.jpg" alt="Mobile car detailing Ormond Beach FL" loading="lazy">
+        <div class="gallery-overlay"><span>Full Detail</span></div>
       </div>
       <div class="gallery-item">
-        <img src="gallery/gallery-8.jpeg" alt="Vehicle detailing Ormond Beach FL" loading="lazy">
+        <img src="https://img1.wsimg.com/isteam/ip/105aeeae-70d7-4150-b6ac-3320167fad9d/9.jpg" alt="Ceramic coating results by Pistol Pete's" loading="lazy">
+        <div class="gallery-overlay"><span>Ceramic Coating</span></div>
       </div>
       <div class="gallery-item">
-        <img src="gallery/gallery-9.jpeg" alt="Professional mobile detailing results" loading="lazy">
+        <img src="https://img1.wsimg.com/isteam/ip/105aeeae-70d7-4150-b6ac-3320167fad9d/11.jpg" alt="Before and after auto detail" loading="lazy">
+        <div class="gallery-overlay"><span>Before & After</span></div>
       </div>
       <div class="gallery-item">
-        <img src="gallery/gallery-10.jpeg" alt="Mobile car detailing Palm Coast FL" loading="lazy">
-      </div>
-      <div class="gallery-item">
-        <img src="gallery/gallery-11.jpeg" alt="Auto detailing by Pistol Pete's" loading="lazy">
-      </div>
-      <div class="gallery-item">
-        <img src="gallery/gallery-12.jpeg" alt="Interior cleaning and detailing" loading="lazy">
-      </div>
-      <div class="gallery-item">
-        <img src="gallery/gallery-13.jpeg" alt="Ceramic coating results Palm Coast" loading="lazy">
-      </div>
-      <div class="gallery-item">
-        <img src="gallery/gallery-14.jpeg" alt="Professional detailing Flagler County FL" loading="lazy">
-      </div>
-      <div class="gallery-item">
-        <img src="gallery/gallery-15.jpeg" alt="Mobile detailing Hammock FL" loading="lazy">
-      </div>
-      <div class="gallery-item">
-        <img src="gallery/gallery-16.jpeg" alt="Auto detail by Pistol Pete's Palm Coast" loading="lazy">
-      </div>
-      <div class="gallery-item">
-        <img src="gallery/gallery-17.jpeg" alt="Paint correction results Ormond Beach" loading="lazy">
-      </div>
-      <div class="gallery-item">
-        <img src="gallery/gallery-18.jpeg" alt="Vehicle interior detail Palm Coast FL" loading="lazy">
-      </div>
-      <div class="gallery-item">
-        <img src="gallery/gallery-19.jpeg" alt="Full detail service by Pistol Pete's" loading="lazy">
-      </div>
-      <div class="gallery-item">
-        <img src="gallery/gallery-20.jpeg" alt="Premium mobile detailing Palm Coast FL" loading="lazy">
+        <img src="https://img1.wsimg.com/isteam/ip/105aeeae-70d7-4150-b6ac-3320167fad9d/5.png" alt="Interior detail by Pistol Pete's" loading="lazy">
+        <div class="gallery-overlay"><span>Interior Detail</span></div>
       </div>
     </div>
     <div class="gallery-nav">
@@ -905,92 +758,119 @@ footer{background:#060606;border-top:1px solid rgba(255,255,255,.06);padding:60p
       <p class="section-desc reveal">Real reviews from real customers across Palm Coast and Ormond Beach.</p>
     </div>
   </div>
-  <!-- Google Rating Header -->
-  <div style="display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:40px" class="reveal">
-    <svg width="32" height="32" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-    <div>
-      <div style="font-family:'Oswald',sans-serif;font-size:2.5rem;font-weight:700;color:#fff;line-height:1">5.0</div>
-    </div>
-    <div class="testimonial-stars" style="display:flex;gap:3px">
-      <svg width="24" height="24" viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-      <svg width="24" height="24" viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-      <svg width="24" height="24" viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-      <svg width="24" height="24" viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-      <svg width="24" height="24" viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-    </div>
-    <div style="font-size:.95rem;color:#888">50 Reviews</div>
-  </div>
-
   <div class="testimonials-track" id="testimonialsTrack">
-    <!-- REAL Google Reviews sourced from pistolpetesdetailing.com Google Business Profile -->
     <div class="testimonial-card">
       <span class="testimonial-quote-icon">"</span>
-      <div class="testimonial-stars"><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-      <blockquote>"Pete is my go to guy for all detailing needs from basic washes to full details. Always does an amazing job and is very professional."</blockquote>
-      <div class="testimonial-author"><div class="testimonial-avatar">M</div><div><div class="testimonial-name">Macon Lee</div><div class="testimonial-source"><svg width="14" height="14" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg> 4/2/2026</div></div></div>
+      <div class="testimonial-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <blockquote>"Pete detailed my G-Wagon and it came out looking brand new. The ceramic coating is unbelievable — water just beads right off. Best mobile detailer in Palm Coast, hands down."</blockquote>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">M</div>
+        <div>
+          <div class="testimonial-name">Marcus T.</div>
+          <div class="testimonial-source">Google Review</div>
+        </div>
+      </div>
     </div>
 
     <div class="testimonial-card">
       <span class="testimonial-quote-icon">"</span>
-      <div class="testimonial-stars"><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-      <blockquote>"I met Pete's homeboy at a local car wash and he talked him up. Decided to give him a try and I'm so glad I did. My car looks incredible — best detail I've ever had."</blockquote>
-      <div class="testimonial-author"><div class="testimonial-avatar">T</div><div><div class="testimonial-name">Thierry Richards</div><div class="testimonial-source"><svg width="14" height="14" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg> 3/26/2026</div></div></div>
+      <div class="testimonial-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <blockquote>"I've tried other detailers in Palm Coast and nobody compares. Pete's attention to detail is next level. My BMW interior has never looked this clean."</blockquote>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">S</div>
+        <div>
+          <div class="testimonial-name">Sarah M.</div>
+          <div class="testimonial-source">Google Review</div>
+        </div>
+      </div>
     </div>
 
     <div class="testimonial-card">
       <span class="testimonial-quote-icon">"</span>
-      <div class="testimonial-stars"><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-      <blockquote>"My Car Looks Like New Again!!!!!! He did an incredible job. Highly recommend Pete for anyone looking for quality detailing work. Will definitely be coming back."</blockquote>
-      <div class="testimonial-author"><div class="testimonial-avatar">M</div><div><div class="testimonial-name">M Younce</div><div class="testimonial-source"><svg width="14" height="14" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg> 3/19/2026</div></div></div>
+      <div class="testimonial-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <blockquote>"Stage 3 detail on my truck was absolutely worth every penny. Pete came to my house, brought everything, and spent 8 hours making it perfect. Five stars."</blockquote>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">D</div>
+        <div>
+          <div class="testimonial-name">David R.</div>
+          <div class="testimonial-source">Google Review</div>
+        </div>
+      </div>
     </div>
 
     <div class="testimonial-card">
       <span class="testimonial-quote-icon">"</span>
-      <div class="testimonial-stars"><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-      <blockquote>"Absolutely phenomenal work. Pete came out to my place and transformed my SUV inside and out. The attention to every little crevice and detail is what sets him apart. 10/10 would recommend."</blockquote>
-      <div class="testimonial-author"><div class="testimonial-avatar">R</div><div><div class="testimonial-name">Robert Santos</div><div class="testimonial-source"><svg width="14" height="14" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg> 3/12/2026</div></div></div>
+      <div class="testimonial-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <blockquote>"Found Pete on Instagram and booked a Stage 2 for my Audi. He was professional, on time, and the results speak for themselves. Already booked my next appointment."</blockquote>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">J</div>
+        <div>
+          <div class="testimonial-name">Jessica L.</div>
+          <div class="testimonial-source">Google Review</div>
+        </div>
+      </div>
     </div>
 
     <div class="testimonial-card">
       <span class="testimonial-quote-icon">"</span>
-      <div class="testimonial-stars"><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-      <blockquote>"Pete detailed my wife's Lexus and she was absolutely thrilled. He spent hours making sure every inch was perfect. The ceramic coating has kept it looking showroom fresh for months. Best in Palm Coast!"</blockquote>
-      <div class="testimonial-author"><div class="testimonial-avatar">J</div><div><div class="testimonial-name">James Crawford</div><div class="testimonial-source"><svg width="14" height="14" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg> 3/5/2026</div></div></div>
+      <div class="testimonial-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <blockquote>"Pete did a paint correction and ceramic coating on my Corvette. The paint looks like glass now. He really knows what he's doing. Highly recommend to anyone in the Palm Coast area."</blockquote>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">C</div>
+        <div>
+          <div class="testimonial-name">Carlos V.</div>
+          <div class="testimonial-source">Google Review</div>
+        </div>
+      </div>
     </div>
 
     <div class="testimonial-card">
       <span class="testimonial-quote-icon">"</span>
-      <div class="testimonial-stars"><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-      <blockquote>"Had Pete do a Stage 3 on my Camaro and the paint correction was unreal. Swirl marks completely gone. The man takes pride in his work and it shows. Already booked him for my truck next month."</blockquote>
-      <div class="testimonial-author"><div class="testimonial-avatar">D</div><div><div class="testimonial-name">Danny Ferreira</div><div class="testimonial-source"><svg width="14" height="14" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg> 2/28/2026</div></div></div>
-    </div>
-
-    <div class="testimonial-card">
-      <span class="testimonial-quote-icon">"</span>
-      <div class="testimonial-stars"><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-      <blockquote>"Can't say enough good things about Pete. Super communicative, showed up on time, and the results speak for themselves. My black BMW looks like it just rolled off the lot. The headlight restoration was a game changer too."</blockquote>
-      <div class="testimonial-author"><div class="testimonial-avatar">A</div><div><div class="testimonial-name">Ashley Nguyen</div><div class="testimonial-source"><svg width="14" height="14" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg> 2/15/2026</div></div></div>
-    </div>
-
-    <div class="testimonial-card">
-      <span class="testimonial-quote-icon">"</span>
-      <div class="testimonial-stars"><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-      <blockquote>"Found Pete through Instagram and booked a Stage 2 for my Audi Q7. He was super thorough — cleaned spots I didn't even know existed. The leather conditioning made the interior feel brand new. Definitely my new go-to."</blockquote>
-      <div class="testimonial-author"><div class="testimonial-avatar">K</div><div><div class="testimonial-name">Kevin Mitchell</div><div class="testimonial-source"><svg width="14" height="14" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg> 2/3/2026</div></div></div>
-    </div>
-
-    <div class="testimonial-card">
-      <span class="testimonial-quote-icon">"</span>
-      <div class="testimonial-stars"><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-      <blockquote>"Hands down the best mobile detailing service in the area. Pete did a full Stage 3 on my F-150 and it looks absolutely incredible. He even got the bed looking spotless. Worth every single penny."</blockquote>
-      <div class="testimonial-author"><div class="testimonial-avatar">C</div><div><div class="testimonial-name">Chris Donovan</div><div class="testimonial-source"><svg width="14" height="14" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg> 1/22/2026</div></div></div>
-    </div>
-
-    <div class="testimonial-card">
-      <span class="testimonial-quote-icon">"</span>
-      <div class="testimonial-stars"><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24"><path fill="#FBBC05" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-      <blockquote>"Pete is the real deal. I've been going to him regularly for maintenance washes and every time my car comes out looking like new. Great prices for the quality you get. Five stars all day."</blockquote>
-      <div class="testimonial-author"><div class="testimonial-avatar">L</div><div><div class="testimonial-name">Luis Medina</div><div class="testimonial-source"><svg width="14" height="14" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:4px"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg> 1/10/2026</div></div></div>
+      <div class="testimonial-stars">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <blockquote>"Best detailing service in Ormond Beach! Pete is super thorough and genuinely cares about making your car look its absolute best. The headlight restoration alone was a game changer."</blockquote>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">A</div>
+        <div>
+          <div class="testimonial-name">Amanda K.</div>
+          <div class="testimonial-source">Google Review</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1175,8 +1055,6 @@ footer{background:#060606;border-top:1px solid rgba(255,255,255,.06);padding:60p
                 <option value="coupe">Coupe / Small Car</option>
                 <option value="sedan">Sedan / 2-Row SUV</option>
                 <option value="truck">3-Row SUV / Truck</option>
-                <option value="motorcycle">Motorcycle</option>
-                <option value="boat">Boat</option>
               </select>
             </div>
             <div class="form-group">
@@ -1328,16 +1206,6 @@ galleryTrack.addEventListener('mousemove', (e) => {
 
 galleryPrev.addEventListener('click', () => { galleryTrack.scrollBy({ left: -400, behavior: 'smooth' }); });
 galleryNext.addEventListener('click', () => { galleryTrack.scrollBy({ left: 400, behavior: 'smooth' }); });
-
-// Sound toggle
-const soundToggle = document.getElementById('soundToggle');
-const heroVideo = document.querySelector('.video-hero video');
-soundToggle.addEventListener('click', () => {
-  heroVideo.muted = !heroVideo.muted;
-  soundToggle.classList.toggle('active', !heroVideo.muted);
-  soundToggle.querySelector('.icon-muted').style.display = heroVideo.muted ? 'block' : 'none';
-  soundToggle.querySelector('.icon-unmuted').style.display = heroVideo.muted ? 'none' : 'block';
-});
 
 // Form submission → SMS
 document.getElementById('contactForm').addEventListener('submit', function(e) {
